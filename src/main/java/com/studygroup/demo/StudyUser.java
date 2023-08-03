@@ -1,12 +1,12 @@
 package com.studygroup.demo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Getter;
 
+@Getter
 @Entity
-public class User {
+@Table(name = "study_user")
+public class StudyUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,19 +14,10 @@ public class User {
 
     private String name;
 
-    public User() {}
+    public StudyUser() {}
 
-    public User(int id, String name) {
-        this.id = id;
+    public StudyUser(String name) {
         this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void setName(String name) {

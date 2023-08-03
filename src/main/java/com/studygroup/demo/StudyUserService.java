@@ -1,2 +1,8 @@
-package com.studygroup.demo;public class StudyUserService {
+package com.studygroup.demo;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class StudyUserService {
+
 }
