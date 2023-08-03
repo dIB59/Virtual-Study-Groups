@@ -8,6 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*")
 public class StudyGroupController {
 
+    private final StudyUserService service;
+
+    public StudyGroupController( StudyUserService service){
+        this.service = service;
+    }
+
     @GetMapping
     public String sayHello() {
         return "hello";
